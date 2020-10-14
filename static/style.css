@@ -7,12 +7,15 @@
 }
 
 
+
 :root {
     --bg-color: #f9f8eb;
     --box-color: #eae7e7;
     --text-color: #76b39d;
     --header-color: #155e63;
 }
+
+
 
 
 #body {
@@ -112,6 +115,7 @@
 #form-submit {
     margin-top: 25px;
 }
+
 
 
 
