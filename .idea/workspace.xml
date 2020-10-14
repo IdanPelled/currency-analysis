@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d02d59b6-157e-4d2b-84d5-14585251884d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iiybbrUFPhaOO8raemQ8ReSQQZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my-project - Copy" />
+  </component>
+  <component name="RunManager" selected="Python.API-test">
+    <configuration name="API-test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Day-1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\limor pelled\New folder\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API-test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" singleton="false">
+      <module name="Day-1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\limor pelled\New folder\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.API-test" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d02d59b6-157e-4d2b-84d5-14585251884d" name="Default Changelist" comment="" />
+      <created>1602404779844</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602404779844</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1329" y="44" width="1173" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602518223901">
+      <screen x="-1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="-1329" y="44" width="1173" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1366.0.1366.728/0.0.1280.984@-1366.0.1366.728" timestamp="1602518223901" />
+    <state x="90" y="138" width="1099" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1366.0.1366.728/0.0.1280.984@0.0.1280.984" timestamp="1602404847790" />
+    <state x="-956" y="60" key="FileChooserDialogImpl" timestamp="1602697389794">
+      <screen x="-1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="-956" y="60" key="FileChooserDialogImpl/-1366.0.1366.728/0.0.1280.984@-1366.0.1366.728" timestamp="1602697389794" />
+    <state width="1366" height="248" key="GridCell.Tab.0.bottom" timestamp="1602525635433">
+      <screen x="-1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="248" key="GridCell.Tab.0.bottom/-1366.0.1366.728/0.0.1280.984@-1366.0.1366.728" timestamp="1602525635433" />
+    <state width="1280" height="252" key="GridCell.Tab.0.bottom/-1366.0.1366.728/0.0.1280.984@0.0.1280.984" timestamp="1602404888491" />
+    <state width="1366" height="248" key="GridCell.Tab.0.center" timestamp="1602525635433">
+      <screen x="-1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="248" key="GridCell.Tab.0.center/-1366.0.1366.728/0.0.1280.984@-1366.0.1366.728" timestamp="1602525635433" />
+    <state width="1280" height="252" key="GridCell.Tab.0.center/-1366.0.1366.728/0.0.1280.984@0.0.1280.984" timestamp="1602404888490" />
+    <state width="1366" height="248" key="GridCell.Tab.0.left" timestamp="1602525635433">
+      <screen x="-1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="248" key="GridCell.Tab.0.left/-1366.0.1366.728/0.0.1280.984@-1366.0.1366.728" timestamp="1602525635433" />
+    <state width="1280" height="252" key="GridCell.Tab.0.left/-1366.0.1366.728/0.0.1280.984@0.0.1280.984" timestamp="1602404888490" />
+    <state width="1366" height="248" key="GridCell.Tab.0.right" timestamp="1602525635433">
+      <screen x="-1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="248" key="GridCell.Tab.0.right/-1366.0.1366.728/0.0.1280.984@-1366.0.1366.728" timestamp="1602525635433" />
+    <state width="1280" height="252" key="GridCell.Tab.0.right/-1366.0.1366.728/0.0.1280.984@0.0.1280.984" timestamp="1602404888490" />
+  </component>
+</project>
