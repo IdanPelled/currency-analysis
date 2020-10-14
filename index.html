@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--https://github.com/joshbuchea/HEAD-->
+        <meta charset="utf-8">
+        <link rel= stylesheet type= text/css href= style.css>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+              integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Currency Analysis</title>
+
+
+    </head>
+    <body id="body">
+
+        <header id="header">
+            <h1 class="h1">Currency Analysis</h1>
+        </header>
+
+        <main id="main">
+
+            <div id="text-div">
+                <p>
+                    Welcome to Currency Analysis.
+                    Our main goal is to help you invest your money wisely.
+                    Here you can easily watch and compare the history of different types of currencies.
+                    If you would like, you can also compare real time values.<br>
+                    Our information is retrieved from the data-base of
+                    <a href="https://www.ecb.europa.eu/home/html/index.en.html">European Central Bank</a>.<br>
+                    To start, enter the currencies you would like to compare, then hit the <b>Analyze</b> button and enjoy!
+                </p>
+            </div>
+
+
+            <form id="search-form">
+
+                <h2>Select a base currency:</h2>
+                <div id="select-base form-group" >
+                  <label class="label">
+
+                      <select id="base-currency" name="base-currency" class="form-control">
+                        <option value="USD">US dollar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="JPY">Japanese yen (JPY)</option>
+                        <option value="GBP">Pound sterling (GBP)</option>
+                        <option value="AUD">Australian dollar (AUD)</option>
+                        <option value="CAD">Canadian dollar (CAD)</option>
+                        <option value="CHF">Swiss franc (CHF)</option>
+                        <option value="CNH">Chinese renminbi (CNH)</option>
+                        <option value="ILS">Israeli shekel (ILS)</option>
+                      </select>
+
+                  </label>
+              </div>
+
+                <h2>Select currencies to compare:</h2>
+                <div id="select-currencies">
+                    <div class="form-check">
+                      <input type="checkbox" value="USD" name="USD" id="USD" class="form-check-input">
+                       <label class="label form-check-label" for="USD" > US dollar (USD)</label>
+                    </div>
+
+                    <div class="form-check">
+                      <input type="checkbox" value="EUR" name="EUR" id="EUR" class="form-check-input">
+                      <label class="label form-check-label" for="EUR"> Euro (EUR)</label>
+                    </div>
+
+                    <div class="form-check">
+                      <input type="checkbox" value="JPY" name="JPY" id="JPY" class="form-check-input">
+                      <label class="label form-check-label" for="JPY"> Japanese yen (JPY)</label>
+                    </div>
+
+                    <div class="form-check">
+                      <input type="checkbox" value="GBP" name="GBP" id="GBP" class="form-check-input">
+                      <label class="label form-check-label" for="GBP"> Pound sterling (GBP)</label>
+                    </div>
+
+                    <div class="form-check">
+                      <input type="checkbox" value="AUD" name="AUD" id="AUD" class="form-check-input">
+                      <label class="label form-check-label" for="AUD"> Australian dollar (AUD)</label>
+                    </div>
+
+                    <div class="form-check">
+                      <input type="checkbox" value="CAD" name="CAD" id="CAD" class="form-check-input">
+                      <label class="label form-check-label" for="CAD"> Canadian dollar (CAD)</label>
+                    </div>
+
+                    <div class="form-check">
+                      <input type="checkbox" value="CHF" name="CHF" id="CHF" class="form-check-input">
+                      <label class="label form-check-label" for="CHF"> Swiss franc (CHF)</label>
+                    </div>
+
+                    <div class="form-check">
+                      <input type="checkbox" value="CNH" name="CNH" id="CNH" class="form-check-input">
+                      <label class="label form-check-label" for="CNH"> Chinese renminbi (CNH)</label>
+                    </div>
+
+                    <div class="form-check">
+                      <input type="checkbox" value="ILS" name="ILS" id="ILS" class="form-check-input">
+                      <label class="label form-check-label" for="ILS"> Israeli shekel (ILS)</label>
+                    </div>
+
+              </div>
+
+                <h2>Select a time frame</h2>
+                <div id="select-time-frame">
+                    <label class="label block">
+                        <input type="radio" name="time-frame" value="Live" checked> Live
+                    </label>
+                    <label class="label block">
+                        <input type="radio" name="time-frame" value="Last week"> Last week
+                    </label>
+                    <label class="label block">
+                        <input type="radio" name="time-frame" value="Last month"> Last month
+                    </label>
+                    <label class="label block">
+                        <input type="radio" name="time-frame" value="Last year"> Last year
+                    </label>
+              </div>
+
+                <div id="form-submit">
+                    <button type="submit" class="btn btn-success">Analyze!</button>
+                </div>
+
+
+            </form>
+
+        </main>
+        <footer id="footer">
+            <div id="footer-links">
+                <a href="#">GitHub</a>
+                <a href="#">About</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <small>This site was designed and created by Idan Pelled</small>
+        </footer>
+
+    </body>
+</html>
