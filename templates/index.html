@@ -3,7 +3,7 @@
     <head>
         <!--https://github.com/joshbuchea/HEAD-->
         <meta charset="utf-8">
-        <link rel= stylesheet type= text/css href= style.css>
+        <link rel= stylesheet type= text/css href="{{ url_for('static', filename='style.css') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
               integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,47 +56,47 @@
                 <h2>Select currencies to compare:</h2>
                 <div id="select-currencies">
                     <div class="form-check">
-                      <input type="checkbox" value="USD" name="USD" id="USD" class="form-check-input">
+                      <input type="checkbox" value="USD" name="secondary-currency" id="USD" class="form-check-input">
                        <label class="label form-check-label" for="USD" > US dollar (USD)</label>
                     </div>
 
                     <div class="form-check">
-                      <input type="checkbox" value="EUR" name="EUR" id="EUR" class="form-check-input">
+                      <input type="checkbox" value="EUR" name="secondary-currency" id="EUR" class="form-check-input">
                       <label class="label form-check-label" for="EUR"> Euro (EUR)</label>
                     </div>
 
                     <div class="form-check">
-                      <input type="checkbox" value="JPY" name="JPY" id="JPY" class="form-check-input">
+                      <input type="checkbox" value="JPY" name="secondary-currency" id="JPY" class="form-check-input">
                       <label class="label form-check-label" for="JPY"> Japanese yen (JPY)</label>
                     </div>
 
                     <div class="form-check">
-                      <input type="checkbox" value="GBP" name="GBP" id="GBP" class="form-check-input">
+                      <input type="checkbox" value="GBP" name="secondary-currency" id="GBP" class="form-check-input">
                       <label class="label form-check-label" for="GBP"> Pound sterling (GBP)</label>
                     </div>
 
                     <div class="form-check">
-                      <input type="checkbox" value="AUD" name="AUD" id="AUD" class="form-check-input">
+                      <input type="checkbox" value="AUD" name="secondary-currency" id="AUD" class="form-check-input">
                       <label class="label form-check-label" for="AUD"> Australian dollar (AUD)</label>
                     </div>
 
                     <div class="form-check">
-                      <input type="checkbox" value="CAD" name="CAD" id="CAD" class="form-check-input">
+                      <input type="checkbox" value="CAD" name="secondary-currency" id="CAD" class="form-check-input">
                       <label class="label form-check-label" for="CAD"> Canadian dollar (CAD)</label>
                     </div>
 
                     <div class="form-check">
-                      <input type="checkbox" value="CHF" name="CHF" id="CHF" class="form-check-input">
+                      <input type="checkbox" value="CHF" name="secondary-currency" id="CHF" class="form-check-input">
                       <label class="label form-check-label" for="CHF"> Swiss franc (CHF)</label>
                     </div>
 
                     <div class="form-check">
-                      <input type="checkbox" value="CNH" name="CNH" id="CNH" class="form-check-input">
+                      <input type="checkbox" value="CNH" name="secondary-currency" id="CNH" class="form-check-input">
                       <label class="label form-check-label" for="CNH"> Chinese renminbi (CNH)</label>
                     </div>
 
                     <div class="form-check">
-                      <input type="checkbox" value="ILS" name="ILS" id="ILS" class="form-check-input">
+                      <input type="checkbox" value="ILS" name="secondary-currency" id="ILS" class="form-check-input">
                       <label class="label form-check-label" for="ILS"> Israeli shekel (ILS)</label>
                     </div>
 
@@ -119,7 +119,7 @@
               </div>
 
                 <div id="form-submit">
-                    <button type="submit" class="btn btn-success">Analyze!</button>
+                    <button type="submit" class="btn">Analyze!</button>
                 </div>
 
 
@@ -128,7 +128,7 @@
         </main>
         <footer id="footer">
             <div id="footer-links">
-                <a href="#">GitHub</a>
+                <a href="https://github.com/IdanPelled/currency-analysis">GitHub</a>
                 <a href="#">About</a>
                 <a href="#">Contact Us</a>
             </div>

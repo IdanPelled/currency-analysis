@@ -6,7 +6,18 @@
     font-style: normal;
 }
 
+
+:root {
+    --bg-color: #f9f8eb;
+    --box-color: #eae7e7;
+    --text-color: #76b39d;
+    --header-color: #155e63;
+}
+
+
 #body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-size: 10px;
     font-family: source_sans_proregular, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,
     "Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -28,7 +39,7 @@
 }
 
 #header {
-    background-color: #1d8238;
+    background-color: var(--header-color);
     color: white;
     padding: 10px;
     height: 10%;
@@ -49,7 +60,7 @@
     display: block;
 }
 
-#footer #footer-links a{
+#footer #footer-links a {
     display: inline-block;
 
     color: white;
@@ -61,8 +72,9 @@
 }
 
 #search-form {
+    color: black;
     border-radius: 8px;
-    background-color: rgba(219, 225, 219, .5);
+    background-color: var(--box-color);
     padding: 35px;
     font-size: 1.3rem;
 }
@@ -82,14 +94,15 @@
 
 }
 
-#search-form .btn-success {
-    background-color: #1d8238;
-    border-color: #1d8238;
+#search-form .btn {
+    background-color: var(--header-color);
+    border-color: var(--header-color);
+    color: white;
 }
 
 #search-form h2{
     margin-top: 35px;
-    color: #1d8238;
+    color: var(--header-color);
 }
 
 #search-form h2:first-child {
@@ -119,5 +132,5 @@
 }
 
 #text-div a{
-    color: #1d8238;
+    color: var(--header-color);
 }
