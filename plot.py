@@ -1,12 +1,10 @@
 import json
 from datetime import datetime
-from typing import List, Generator, Tuple, Dict
+from typing import List
 
 import matplotlib.pyplot as plt
 import mpld3
 import requests
-from matplotlib.dates import datestr2num
-import matplotlib.dates as mdates
 
 
 def get_date() -> str:
@@ -39,7 +37,7 @@ def sort_data(data: dict):
     return data_list
 
 
-def reformat_data(data: list, currencies: list):
+def reformat_data(data: dict, currencies: list):
     """"""
     data = sort_data(data)
     reformatted_data = {c: {"x": [], "y": []} for c in currencies}
@@ -47,15 +45,16 @@ def reformat_data(data: list, currencies: list):
         for date, info in item.items():
             for currency, val in info.items():
                 reformatted_data[currency]["x"].append(date)
-                reformatted_data[currency]["y"].append(1 / val)
+                reformatted_data[currency]["y"].append(1 / val)  # reverse the ratio
 
     return reformatted_data
 
 
 def get_data(base, currencies, start_date):
     """returns the data about currencies."""
-    response = get_response(base, currencies, start_date).text
-    return reformat_data(json.loads(response)["rates"], currencies)
+    json_response = get_response(base, currencies, start_date).text
+    data = json.loads(json_response)["rates"]
+    return reformat_data(data, currencies)
 
 
 def get_color():
@@ -68,28 +67,20 @@ def create_plot(base: str, currencies: List[str], start_date: str) -> str:
     """Creates a plot and returns it as a html string."""
     data = get_data(base, currencies, start_date)
     fig, ax = plt.subplots()
-    a = plt.gca()
-    formatter = mdates.DateFormatter("%Y-%m-%d")
-    a.xaxis.set_major_formatter(formatter)
-    locator = mdates.DayLocator()
-    a.xaxis.set_major_locator(locator)
-
     colors = get_color()
 
     for currency, info in data.items():
+        # converts the string to a date object
         x = [datetime.strptime(d, "%Y-%m-%d").date() for d in info["x"]]
         y = info["y"]
         ax.plot(x, y, label=currency, color=next(colors))
-        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 
     plt.subplots_adjust(right=.8)
     plt.ylabel(base)
     plt.xlabel('Time')
-    plt.title("My plot", fontdict=None, loc='center')
-
     return mpld3.fig_to_html(fig)
 
 
 if __name__ == "__main__":
-    axs = create_plot("EUR", ["USD", "ILS"], "2020-1-1")
-    print(axs)
+    plot_code = create_plot("EUR", ["USD", "ILS"], "2020-10-1")
+    print(plot_code)

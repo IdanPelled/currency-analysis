@@ -16,7 +16,6 @@
 }
 
 
-
 #body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -32,6 +31,7 @@
      margin: 20px;
      display: flex;
      flex-flow: column wrap;
+     min-height: 100%;
      align-items: center;
 }
 
@@ -51,7 +51,7 @@
     background-color: black;
     font-size: 1.2rem;
     color: white;
-    width: 100%;
+    width: auto;
     height:100%;
     margin-top: 20px;
     display: flex;
@@ -119,7 +119,7 @@
 
 
 
-#text-div {
+.text-div {
     line-height: 35px;
     width: 65%;
     margin: 15px;
@@ -127,13 +127,42 @@
     font-size: 1.4rem;
 }
 
-@media (max-width: 600px) {
-
-    #text-div {
-        width: 90%;
-    }
+.text-div a{
+    color: var(--header-color);
 }
 
-#text-div a{
-    color: var(--header-color);
+
+
+
+#graph-box > div{
+    background-color: white;
+}
+
+
+
+
+
+.home-btn {
+
+}
+
+
+
+
+@media (max-width: 650px) {
+    .text-div {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+    #graph-box > div{
+        width: 100%;
+    }
+
+    #graph-box > div svg{
+        width: 90%;
+    }
+    #main, #graph-box{
+        margin: auto;
+        width: 95%;
+    }
 }
