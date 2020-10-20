@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <!--https://github.com/joshbuchea/HEAD-->
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link rel= stylesheet type= text/css href="{{ url_for('static', filename='style.css') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
               integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>{% block title %}Currency Analysis{% endblock %}</title>
         {% block head %}{% endblock %}
 
@@ -17,11 +20,8 @@
         <header id="header">
             <h1 class="h1">Currency Analysis</h1>
         </header>
-
         <main id="main">
-
             {% block content %}{% endblock %}
-
         </main>
         <footer id="footer">
             <div id="footer-links">
@@ -29,7 +29,7 @@
                 <a href="#">About</a>
                 <a href="#">Contact Us</a>
             </div>
-            <small>This site was designed and created by Idan Pelled</small>
+            <small>&copy; All Rights Reserved</small>
         </footer>
 
     </body>

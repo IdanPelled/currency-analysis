@@ -17,7 +17,7 @@
     </p>
 </div>
 
-    <form id="search-form">
+    <form id="search-form" action="/search" method="get">
 
     <h2>Select a base currency:</h2>
     <div id="select-base form-group" >
@@ -98,7 +98,10 @@
             <input type="radio" name="time-frame" value="Last month"> Last month
         </label>
         <label class="label block">
-            <input type="radio" name="time-frame" value="Last year"> Last year
+            <input type="radio" name="time-frame" value="Last 3 month"> Last 3 month
+        </label>
+        <label class="label block">
+            <input type="radio" name="time-frame" value="Last 6 month"> Last 6 month
         </label>
     </div>
 

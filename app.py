@@ -1,4 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
+
+from plot import create_plot
 
 app = Flask(__name__)
 
@@ -10,16 +12,31 @@ def is_valid(args):
 
 @app.route('/')
 def home_page():
-    if is_valid(request.args):
-        print(request.args["secondary-currency"])
-        print('!')
+    return render_template("index.html")
+
+
+@app.route('/search')
+def search_page():
+    args = request.args
+    if is_valid(args):
+        base = args.get("base-currency")
+        currencies = args.getlist("secondary-currency")
+        time = args.get("time-frame")
+        plot = create_plot(base, ["USD", "ILS"], time)
         return render_template(
             "search.html",
-            base=request.args.get("base-currency"),
-            currencies=request.form.getlist("secondary-currency"),
-            time=request.args["time-frame"]
+            base=base,
+            currencies=currencies,
+            time=time,
+            plot=plot
         )
-    return render_template("index.html")
+    else:
+        return redirect(url_for('home_page'))
+
+
+@app.errorhandler(404)
+def page_not_found():
+    return render_template('404.html'), 404
 
 
 if __name__ == "__main__":

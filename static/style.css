@@ -47,6 +47,10 @@
     height: 10%;
 }
 
+h2 {
+     color: var(--header-color);
+}
+
 #footer {
     background-color: black;
     font-size: 1.2rem;
@@ -142,8 +146,9 @@
 
 
 
-.home-btn {
-
+#home-btn {
+    font-size: 1.5rem;
+    float: right;
 }
 
 
