@@ -42,9 +42,13 @@
 
 #header {
     background-color: var(--header-color);
-    color: white;
     padding: 10px;
     height: 10%;
+}
+
+#header a{
+    color: white;
+    text-decoration: none;
 }
 
 h2 {
@@ -55,15 +59,19 @@ h2 {
     background-color: black;
     font-size: 1.2rem;
     color: white;
-    width: auto;
-    height:100%;
-    margin-top: 20px;
+    height: 20%;
+    width: 100%;
+    margin-top:auto;
     display: flex;
     flex-flow: column wrap;
 }
 
 .block {
     display: block;
+}
+
+#footer-links {
+    padding-top: 10px;
 }
 
 #footer #footer-links a {
@@ -170,4 +178,9 @@ h2 {
         margin: auto;
         width: 95%;
     }
+}
+
+
+#graph-box g{
+    color: #eae7e7;
 }

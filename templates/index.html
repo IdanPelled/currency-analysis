@@ -9,10 +9,9 @@
     <p>
         Welcome to Currency Analysis.
         Our main goal is to help you invest your money wisely.
-        Here you can easily watch and compare the history of different types of currencies.
-        If you would like, you can also compare real time values.<br>
+        Here you can easily watch and compare the history of different types of currencies.<br>
         Our information is retrieved from the data-base of
-        <a href="https://www.ecb.europa.eu/home/html/index.en.html">European Central Bank</a>.<br>
+        <a href="https://www.ecb.europa.eu/home/html/index.en.html" target="_blank">European Central Bank</a>.<br>
         To start, enter the currencies you would like to compare, then hit the <b>Analyze</b> button and enjoy!
     </p>
 </div>
@@ -31,7 +30,6 @@
             <option value="AUD">Australian dollar (AUD)</option>
             <option value="CAD">Canadian dollar (CAD)</option>
             <option value="CHF">Swiss franc (CHF)</option>
-            <option value="CNH">Chinese renminbi (CNH)</option>
             <option value="ILS">Israeli shekel (ILS)</option>
           </select>
 
@@ -76,11 +74,6 @@
         </div>
 
         <div class="form-check">
-          <input type="checkbox" value="CNH" name="secondary-currency" id="CNH" class="form-check-input">
-          <label class="label form-check-label" for="CNH"> Chinese renminbi (CNH)</label>
-        </div>
-
-        <div class="form-check">
           <input type="checkbox" value="ILS" name="secondary-currency" id="ILS" class="form-check-input">
           <label class="label form-check-label" for="ILS"> Israeli shekel (ILS)</label>
         </div>
@@ -89,10 +82,7 @@
     <h2>Select a time frame</h2>
     <div id="select-time-frame">
         <label class="label block">
-            <input type="radio" name="time-frame" value="Live" checked> Live
-        </label>
-        <label class="label block">
-            <input type="radio" name="time-frame" value="Last week"> Last week
+            <input type="radio" name="time-frame" value="Last week" checked> Last week
         </label>
         <label class="label block">
             <input type="radio" name="time-frame" value="Last month"> Last month

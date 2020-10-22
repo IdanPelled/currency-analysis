@@ -2,10 +2,11 @@
 
 
 
-{% block title %}Currency Analysis - search{% endblock title%}
+{% block title %}Currency Analysis - {{ base }}{% endblock title%}
 
 
 {% block content %}
+
     <h2 id="page-header">Analyze {{ base }}</h2>
 
     <a href="/" id="home-btn">Home</a>
@@ -13,8 +14,8 @@
     <div class="text-div">
         <p>
             In this page you can <b>interactively</b> compare <em>{{ base }}</em>
-            to <em>{{ currencies }}</em>.<br>
-            The graph describes the chances of <em>{{ currencies }}</em>
+            to <em>{{ currencies|join(' ') }}</em>.<br>
+            The graph describes the chances of <em>{{ currencies|join(' ') }}</em>
             comparing to <em>{{ base }}</em> over the axis of time ({{ time }}).
             On the bottom left corner of the graph, you well find a tool-bar
             that will help you to easily navigate.
@@ -22,12 +23,6 @@
     </div>
 
     <div id="graph-box"></div>
-
-    <div class="text-div">
-        <p>
-            If you would like, here is some more detailed information:{{ a }}
-        </p>
-    </div>
 
     <script>
       {{plot|safe}}

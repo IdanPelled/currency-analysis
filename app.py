@@ -1,41 +1,46 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 
-from plot import create_plot
+from visual import visuals
 
 app = Flask(__name__)
 
 
-def is_valid(args):
-    if args:
-        return True
-
-
 @app.route('/')
 def home_page():
+    """Home page."""
     return render_template("index.html")
 
 
 @app.route('/search')
 def search_page():
+    """Search result page."""
     args = request.args
-    if is_valid(args):
-        base = args.get("base-currency")
-        currencies = args.getlist("secondary-currency")
-        time = args.get("time-frame")
-        plot = create_plot(base, ["USD", "ILS"], time)
+    base = args.get("base-currency")
+    currencies = args.getlist("secondary-currency")
+    time = args.get("time-frame")
+
+    plot = visuals(base, currencies, time)
+    if isinstance(plot, str):
         return render_template(
             "search.html",
             base=base,
             currencies=currencies,
             time=time,
-            plot=plot
+            plot=plot,
         )
-    else:
-        return redirect(url_for('home_page'))
+    elif plot is None:
+        # if the plot parms are un-valid plot
+        print("input error")
+        return render_template('index.html')
+    elif not plot:
+        # if there was an error message from the API
+        print("API error")
+    return render_template('404.html')
 
 
 @app.errorhandler(404)
-def page_not_found():
+def page_not_found(e):
+    """404 page_not_found error page."""
     return render_template('404.html'), 404
 
 
