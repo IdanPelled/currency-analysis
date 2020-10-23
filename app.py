@@ -34,6 +34,7 @@ def search_page():
         return render_template('index.html')
     elif not plot:
         # if there was an error message from the API
+        # or the page was not found
         print("API error")
     return render_template('404.html')
 

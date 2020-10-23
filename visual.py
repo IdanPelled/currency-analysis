@@ -3,6 +3,7 @@ import json
 from typing import List, Union, Dict
 
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 import mpld3
 import requests
 
@@ -53,7 +54,7 @@ def reformat_data(data: dict, currencies: list) -> Dict[str, Dict[str, List[str]
 
 def get_color():
     """Yields a custom color."""
-    colors = ['#155e63', '#76b39d']
+    colors = ['#155e63', '#76b39d', '#000000']
     for color in colors:
         yield color
 
@@ -107,31 +108,35 @@ def get_data(base, currencies, start_date) -> Union[Dict[str, Dict[str, List[str
         return None
 
 
-def create_plot(data, base: str) -> Union[str, None]:
+def create_plot(data) -> Union[str, None]:
     """Creates a plot and returns it as a html string."""
     fig, ax = plt.subplots()
     colors = get_color()
+    patches = []
 
     for currency, info in data.items():
         # converts the string to a date object
         x = [datetime.datetime.strptime(d, "%Y-%m-%d").date() for d in info["x"]]
         y = info["y"]
-        ax.plot(x, y, label=currency, color=next(colors))
+        color = next(colors)
+        ax.plot(x, y, label=currency, color=color)
+        patch = mpatches.Patch(color=color, label=currency)
+        patches.append(patch)
 
-    plt.subplots_adjust(right=.8)
-    plt.ylabel(base)
-    plt.xlabel('Time')
     ax.grid()
+    plt.legend(handles=patches, loc='upper left')
+    plt.tight_layout(pad=0)
+
     return get_js(mpld3.fig_to_html(fig, figid="graph-box"))
 
 
 def visuals(base: str, currencies, time):
     time = normalize_date(time)
-    if 0 < len(currencies) < 3:
+    if 0 < len(currencies) < 4:
         if check_input(base, currencies, time):
             data = get_data(base, currencies, time)
             if data is not None:
-                plot = create_plot(data, base)
+                plot = create_plot(data)
                 return plot
             else:
                 return False

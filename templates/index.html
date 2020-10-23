@@ -6,99 +6,102 @@
 
 {% block content %}
     <div class="text-div">
-    <p>
-        Welcome to Currency Analysis.
-        Our main goal is to help you invest your money wisely.
-        Here you can easily watch and compare the history of different types of currencies.<br>
-        Our information is retrieved from the data-base of
-        <a href="https://www.ecb.europa.eu/home/html/index.en.html" target="_blank">European Central Bank</a>.<br>
-        To start, enter the currencies you would like to compare, then hit the <b>Analyze</b> button and enjoy!
-    </p>
-</div>
+        <p>
+            Welcome to Currency Analysis.
+            Our main goal is to help you invest your money wisely.
+            Here you can easily watch and compare the history of different types of currencies.<br>
+            Our information is retrieved from the data-base of
+            <a href="https://www.ecb.europa.eu/home/html/index.en.html" target="_blank">European Central Bank</a>.<br>
+            To start, enter the currencies you would like to compare, then hit the <b>Analyze</b> button and enjoy!
+        </p>
+    </div>
 
     <form id="search-form" action="/search" method="get">
 
-    <h2>Select a base currency:</h2>
-    <div id="select-base form-group" >
-      <label class="label">
+        <h2>Select a base currency:</h2>
+        <div id="select-base form-group" >
+          <label class="label">
 
-          <select id="base-currency" name="base-currency" class="form-control">
-            <option value="USD">US dollar (USD)</option>
-            <option value="EUR">Euro (EUR)</option>
-            <option value="JPY">Japanese yen (JPY)</option>
-            <option value="GBP">Pound sterling (GBP)</option>
-            <option value="AUD">Australian dollar (AUD)</option>
-            <option value="CAD">Canadian dollar (CAD)</option>
-            <option value="CHF">Swiss franc (CHF)</option>
-            <option value="ILS">Israeli shekel (ILS)</option>
-          </select>
+              <select id="base-currency" name="base-currency" class="form-control">
+                <option value="USD">US dollar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="JPY">Japanese yen (JPY)</option>
+                <option value="GBP">Pound sterling (GBP)</option>
+                <option value="AUD">Australian dollar (AUD)</option>
+                <option value="CAD">Canadian dollar (CAD)</option>
+                <option value="CHF">Swiss franc (CHF)</option>
+                <option value="ILS">Israeli shekel (ILS)</option>
+              </select>
 
-      </label>
-    </div>
-
-    <h2>Select currencies to compare:</h2>
-    <div id="select-currencies">
-        <div class="form-check">
-          <input type="checkbox" value="USD" name="secondary-currency" id="USD" class="form-check-input">
-           <label class="label form-check-label" for="USD" > US dollar (USD)</label>
+          </label>
         </div>
 
-        <div class="form-check">
-          <input type="checkbox" value="EUR" name="secondary-currency" id="EUR" class="form-check-input">
-          <label class="label form-check-label" for="EUR"> Euro (EUR)</label>
+        <h2>Select currencies to compare:</h2>
+        <small>(Select one to three currencies)</small>
+        <div id="select-currencies">
+            <div class="form-check">
+              <input type="checkbox" value="USD" name="secondary-currency" id="USD" class="form-check-input">
+              <label class="label form-check-label" for="USD" > US dollar (USD)</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" value="EUR" name="secondary-currency" id="EUR" class="form-check-input">
+              <label class="label form-check-label" for="EUR"> Euro (EUR)</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" value="JPY" name="secondary-currency" id="JPY" class="form-check-input">
+              <label class="label form-check-label" for="JPY"> Japanese yen (JPY)</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" value="GBP" name="secondary-currency" id="GBP" class="form-check-input">
+              <label class="label form-check-label" for="GBP"> Pound sterling (GBP)</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" value="AUD" name="secondary-currency" id="AUD" class="form-check-input">
+              <label class="label form-check-label" for="AUD"> Australian dollar (AUD)</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" value="CAD" name="secondary-currency" id="CAD" class="form-check-input">
+              <label class="label form-check-label" for="CAD"> Canadian dollar (CAD)</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" value="CHF" name="secondary-currency" id="CHF" class="form-check-input">
+              <label class="label form-check-label" for="CHF"> Swiss franc (CHF)</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" value="ILS" name="secondary-currency" id="ILS" class="form-check-input">
+              <label class="label form-check-label" for="ILS"> Israeli shekel (ILS)</label>
+            </div>
+
         </div>
 
-        <div class="form-check">
-          <input type="checkbox" value="JPY" name="secondary-currency" id="JPY" class="form-check-input">
-          <label class="label form-check-label" for="JPY"> Japanese yen (JPY)</label>
+        <h2>Select a time frame</h2>
+        <div id="select-time-frame">
+            <label class="label block">
+                <input type="radio" name="time-frame" value="Last week" checked> Last week
+            </label>
+            <label class="label block">
+                <input type="radio" name="time-frame" value="Last month"> Last month
+            </label>
+            <label class="label block">
+                <input type="radio" name="time-frame" value="Last 3 month"> Last 3 month
+            </label>
+            <label class="label block">
+                <input type="radio" name="time-frame" value="Last 6 month"> Last 6 month
+            </label>
         </div>
 
-        <div class="form-check">
-          <input type="checkbox" value="GBP" name="secondary-currency" id="GBP" class="form-check-input">
-          <label class="label form-check-label" for="GBP"> Pound sterling (GBP)</label>
+        <div id="form-submit">
+            <button type="submit" class="btn">Analyze!</button>
         </div>
 
-        <div class="form-check">
-          <input type="checkbox" value="AUD" name="secondary-currency" id="AUD" class="form-check-input">
-          <label class="label form-check-label" for="AUD"> Australian dollar (AUD)</label>
-        </div>
 
-        <div class="form-check">
-          <input type="checkbox" value="CAD" name="secondary-currency" id="CAD" class="form-check-input">
-          <label class="label form-check-label" for="CAD"> Canadian dollar (CAD)</label>
-        </div>
+    </form>
 
-        <div class="form-check">
-          <input type="checkbox" value="CHF" name="secondary-currency" id="CHF" class="form-check-input">
-          <label class="label form-check-label" for="CHF"> Swiss franc (CHF)</label>
-        </div>
-
-        <div class="form-check">
-          <input type="checkbox" value="ILS" name="secondary-currency" id="ILS" class="form-check-input">
-          <label class="label form-check-label" for="ILS"> Israeli shekel (ILS)</label>
-        </div>
-
-    </div>
-    <h2>Select a time frame</h2>
-    <div id="select-time-frame">
-        <label class="label block">
-            <input type="radio" name="time-frame" value="Last week" checked> Last week
-        </label>
-        <label class="label block">
-            <input type="radio" name="time-frame" value="Last month"> Last month
-        </label>
-        <label class="label block">
-            <input type="radio" name="time-frame" value="Last 3 month"> Last 3 month
-        </label>
-        <label class="label block">
-            <input type="radio" name="time-frame" value="Last 6 month"> Last 6 month
-        </label>
-    </div>
-
-    <div id="form-submit">
-        <button type="submit" class="btn">Analyze!</button>
-    </div>
-
-
-</form>
 {% endblock%}
