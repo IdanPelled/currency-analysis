@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}Currency Analysis Disclaimer{% endblock title%}
+
+
+{% block content %}
+
+    <h2 id="page-header">Disclaimer</h2>
+
+    <a href="{{ url_for('home_page') }}" id="home-btn">Home</a>
+
+    <div class="text-div">
+        <h3>Disclaimers for Currency Analysis</h3>
+        <p>
+            All the information on this website - https://currency-analysis.herokuapp.com/ -
+            is published in good faith and only for general information purposes.
+            This is a class project and should not be used for any real life application.
+            Currency Analysis does not make any
+            warranties about the completeness, reliability and accuracy of this information. Any action you
+            take upon the information you find on this website (Currency Analysis), is strictly at your own risk. Currency Analysis
+            will not be liable for any losses and/or damages in connection with the use of our website.
+        </p>
+        <p>
+            From our website, you can visit other websites by following hyperlinks to such external sites.
+            While we strive to provide only quality links to useful and ethical websites, we have no control over
+            the content and nature of these sites. These links to other websites do not imply a recommendation for all
+            the content found on these sites. Site owners and content may change without notice and may occur before we
+            have the opportunity to remove a link which may have gone 'bad'.
+        </p>
+        <p>
+            Our Disclaimer was generated with the help of the
+            <a href="https://www.disclaimergenerator.net/" target="_blank">Disclaimer Generator</a>.
+        </p>
+    </div>
+
+{% endblock content%}

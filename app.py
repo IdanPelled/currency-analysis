@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def home_page():
     """Home page."""
-    return render_template("index.html")
+    return render_template("index.j2")
 
 
 @app.route('/search', methods=['POST', "GET"])
@@ -31,10 +31,9 @@ def search_page():
             )
         elif plot is None:
             # if the plot parms are un-valid plot
-            return render_template('index.html')
+            return render_template('index.j2')
         elif not plot:
             # if there was an error message from the API
-            # or the page was not found
             return "<h1>API Error</h1><p>We are having some problems, try again soon."
     else:
         # if the user tries to go to the search page with a GET request.
@@ -44,7 +43,7 @@ def search_page():
 @app.route('/disclaimer')
 def disclaimer():
     """Disclaimer page."""
-    return render_template("disclaimer.html")
+    return render_template("disclaimer.j2")
 
 
 if __name__ == "__main__":
