@@ -23,7 +23,7 @@ def search_page():
         plot = visuals(base, currencies, time)
         if isinstance(plot, str):
             return render_template(
-                "search.html",
+                "search.j2",
                 base=base,
                 currencies=currencies,
                 time=time,
