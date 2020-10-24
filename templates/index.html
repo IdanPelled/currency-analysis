@@ -7,19 +7,26 @@
 {% block content %}
     <div class="text-div">
         <p>
-            Welcome to Currency Analysis.
-            Our main goal is to help you invest your money wisely.
-            Here you can easily watch and compare the history of different types of currencies.<br>
-            Our information is retrieved from the data-base of
-            <a href="https://www.ecb.europa.eu/home/html/index.en.html" target="_blank">European Central Bank</a>.<br>
-            To start, enter the currencies you would like to compare, then hit the <b>Analyze</b> button and enjoy!
+            <b>Please note that this is a class project, and it should not be taken seriously.<br>
+            for more information check our <a href="{{ url_for('disclaimer') }}">disclaimer</a>.</b>
         </p>
+        <p>
+            Welcome to Currency Analysis, an online, currency exchange rate graph.
+            Here you can easily see and compare the history of different world currencies.<br>
+            Our information is retrieved from the
+            <a href="https://www.ecb.europa.eu/home/html/index.en.html" target="_blank">
+            European Central Bank</a> data-base.<br>
+            To start, choose the currencies you would like to compare, then hit the <b>Analyze</b> button.
+        </p>
+        </p>
+            <b>Tip:</b> If you would like to get more specific, chose only one currency to compare with.
+        <p>
     </div>
 
-    <form id="search-form" action="/search" method="get">
+    <form id="search-form" action="/search" method="POST">
 
         <h2>Select a base currency:</h2>
-        <div id="select-base form-group" >
+        <div id="form-group" >
           <label class="label">
 
               <select id="base-currency" name="base-currency" class="form-control">
@@ -83,16 +90,16 @@
 
         <h2>Select a time frame</h2>
         <div id="select-time-frame">
-            <label class="label block">
+            <label class="label">
                 <input type="radio" name="time-frame" value="Last week" checked> Last week
             </label>
-            <label class="label block">
+            <label class="label">
                 <input type="radio" name="time-frame" value="Last month"> Last month
             </label>
-            <label class="label block">
+            <label class="label">
                 <input type="radio" name="time-frame" value="Last 3 month"> Last 3 month
             </label>
-            <label class="label block">
+            <label class="label">
                 <input type="radio" name="time-frame" value="Last 6 month"> Last 6 month
             </label>
         </div>

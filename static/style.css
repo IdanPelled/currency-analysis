@@ -23,51 +23,42 @@
     font-family: source_sans_proregular, Arial;
 
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
 }
 
 #main {
-     margin: 20px;
-     display: flex;
-     flex-flow: column wrap;
-     min-height: 100%;
-     align-items: center;
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 #header, #footer {
+    width: 100%;
     display: flex;
-    align-items: center;
 }
 
 #header {
+    height: 80px;
     background-color: var(--header-color);
     padding: 10px;
-    height: 10%;
 }
 
-#header a{
+#header a {
     color: white;
     text-decoration: none;
 }
 
-h2 {
-     color: var(--header-color);
-     text-align: center;
-}
-
 #footer {
+    align-items: center;
+    height: 100px;
+    margin-top: 20px;
     background-color: black;
     font-size: 1.2rem;
     color: white;
-    height: 20%;
-    width: 100%;
-    margin-top: 60px;
-    display: flex;
     flex-flow: column wrap;
-}
-
-.block {
-    display: block;
 }
 
 #footer-links {
@@ -81,9 +72,22 @@ h2 {
     margin: 10px;
 }
 
-#footer small{
+#footer small {
     margin-bottom: 15px;
 }
+
+h2, h3 {
+     color: var(--header-color);
+
+}
+
+h2 {
+    text-align: center;
+}
+
+
+
+
 
 #search-form {
     color: black;
@@ -91,16 +95,6 @@ h2 {
     background-color: var(--box-color);
     padding: 35px;
     font-size: 1.3rem;
-}
-
-#select-base {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-}
-
-#search-form #select-base {
-    padding: 5px 10px 5px 0px;
 }
 
 #search-form .form-check {
@@ -132,6 +126,10 @@ h2 {
     margin-top: 25px;
 }
 
+#select-time-frame .label {
+    display: block;
+}
+
 
 
 
@@ -144,9 +142,12 @@ h2 {
     font-size: 1.4rem;
 }
 
-.text-div a{
+.text-div a, .text-div a:hover{
     color: var(--header-color);
 }
+
+
+
 
 
 #home-btn {
@@ -155,12 +156,30 @@ h2 {
     font-weight: 400;
     color: white;
     text-align: center;
-    border-radius: .25rem;
+    border-radius: 5px;
     padding: 6px 12px;
 
     text-decoration: none;
     background-color: var(--header-color);
 }
+
+
+
+
+
+
+#main #graph-box {
+    font-family: inherit;
+}
+
+#graph-box g {
+    color: #eae7e7;
+}
+
+#graph-box {
+    margin-top: 10px;
+}
+
 
 
 
@@ -180,16 +199,4 @@ h2 {
 
     }
 
-}
-
-#main #graph-box {
-    font-family: inherit;
-}
-
-#graph-box g {
-    color: #eae7e7;
-}
-
-#graph-box {
-    margin-top: 10px;
 }
