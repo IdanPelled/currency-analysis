@@ -1,6 +1,6 @@
 import datetime
 import json
-from typing import List, Union, Dict
+from typing import Dict, List, Union
 
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
@@ -99,8 +99,7 @@ def check_input(base: str, currencies: List[str], time: Union[None, datetime.dat
     return False
 
 
-def get_data(base: str, currencies: List[str], start_date: str)\
-            -> Union[Dict[str, Dict[str, List[str]]], None]:
+def get_data(base: str, currencies: List[str], start_date: str) -> Union[Dict[str, Dict[str, List[str]]], None]:
     """returns the data about currencies."""
     response = get_response(base, currencies, start_date)
 
