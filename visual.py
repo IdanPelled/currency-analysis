@@ -1,5 +1,6 @@
 import datetime
 import json
+import os
 from typing import Dict, List, Union
 
 import matplotlib.patches as mpatches
@@ -25,9 +26,10 @@ def get_color():
 def get_response(base: str, currencies: List[str], start: str) -> requests.Response:
     """Requests and returns data about the currencies between two dates."""
     currencies_str = ",".join(currencies)
-    base_url = "https://api.exchangeratesapi.io/history"
-    url = f"{base_url}?start_at={start}&end_at={get_date(datetime.datetime.now())}&symbols={currencies_str}&base={base}"
-    response = requests.get(url)
+    base_url = "https://api.apilayer.com/exchangerates_data/timeseries"
+    url = f"{base_url}?start_date={start}&end_date={get_date(datetime.datetime.now())}&symbols={currencies_str}&base={base}"
+    headers = {"apikey": os.environ['SECRET_KEY']}
+    response = requests.get(url, headers=headers)
     return response
 
 
@@ -102,7 +104,6 @@ def check_input(base: str, currencies: List[str], time: Union[None, datetime.dat
 def get_data(base: str, currencies: List[str], start_date: str) -> Union[Dict[str, Dict[str, List[str]]], None]:
     """returns the data about currencies."""
     response = get_response(base, currencies, start_date)
-
     if response.ok:
         data = json.loads(response.text)["rates"]
         return reformat_data(data, currencies)
